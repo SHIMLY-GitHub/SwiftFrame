@@ -15,7 +15,7 @@ extension String {
         return self.trimmingCharacters(in: whiteSpace)
     }
     /// string 转 int
-    var int:Int?{
+    var toInt:Int?{
         return Int(self)
     }
     

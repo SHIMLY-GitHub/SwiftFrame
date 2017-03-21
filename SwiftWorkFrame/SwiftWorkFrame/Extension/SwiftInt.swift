@@ -9,7 +9,7 @@
 import Foundation
 extension Int {
     ///int 转 string
-    var string:String?{
+    var toString:String!{
         return String(Int(self))
         
     }

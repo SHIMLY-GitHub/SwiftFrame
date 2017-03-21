@@ -17,8 +17,8 @@ struct NewsListFormable:SwiftFormable {
     func parameter() -> [String : Any] {
         
         return ["newsType":"XMFL_RD",
-                "startRow":String(Int(self.page)),
-                "pageSize":String(Int(self.page * 10))]
+                "startRow":self.page.toString,
+                "pageSize":(self.page * 10).toString]
     }
     
 }

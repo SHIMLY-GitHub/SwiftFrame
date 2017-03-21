@@ -17,7 +17,7 @@ class NewsCell: UITableViewCell {
     var newsModel:NewsListModel!{
         willSet{
             newsTitleLabel.text = newValue.title
-            blowNumberLabel.text = newValue.browse_volume.string
+            blowNumberLabel.text = newValue.browse_volume.toString
             newsImageView.setImage(url: "http://www.1001piao.com"+newValue.bimg!)
             
             
