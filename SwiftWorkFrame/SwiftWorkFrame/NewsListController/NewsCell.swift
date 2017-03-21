@@ -10,6 +10,22 @@ import UIKit
 
 class NewsCell: UITableViewCell {
 
+    @IBOutlet weak var newsTitleLabel: UILabel!
+    @IBOutlet weak var blowNumberLabel: UILabel!
+    @IBOutlet weak var newsImageView: UIImageView!
+    
+    var newsModel:NewsListModel!{
+        willSet{
+            newsTitleLabel.text = newValue.title
+            blowNumberLabel.text = String(Int(newValue.browse_volume))
+            newsImageView.setImage(url: "http://www.1001piao.com"+newValue.bimg!)
+            
+            
+            
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

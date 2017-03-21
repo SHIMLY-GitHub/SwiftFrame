@@ -11,6 +11,9 @@ import Foundation
 let SwiftCode = "code"
 let SwiftMessage = "msg"
 let SwiftBody = "dataobj"
+let SwiftSuccessStatus = "0"
+
+
 
 
 		

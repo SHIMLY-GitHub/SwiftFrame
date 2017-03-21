@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 protocol NetWorkPotocol {
+    
     ///requestSuccess:请求数据成功回调
     /// - parameter dataObj : 返回数据
     /// - parameter paramenter: 请求数据的时候传入的参数 
@@ -43,7 +44,7 @@ extension NetWorkPotocol where Self:UIViewController {
             
         }, compleFailureBusioness: {  [weak self] (code,message) in
            
-           self?.requestFieldBusiness(error:  SwiftError(code: 1, message: "业务失败"), formable: formable)
+           self?.requestFieldBusiness(error:  SwiftError(code: code, message: message), formable: formable)
             
         }) {  [weak self]  (error)  in
             
@@ -58,8 +59,8 @@ extension NetWorkPotocol where Self:UIViewController {
                            compleFailureBusioness:@escaping (_ code:Int,_ message:String)->Void,
                            compleFailureSystem:@escaping (_ error:Error)->Void){
             
-        
-        Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
+   
+     Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
 
             switch response.result.isSuccess{
             case true:
@@ -68,7 +69,7 @@ extension NetWorkPotocol where Self:UIViewController {
                 let code = resultValue[SwiftCode] as! String
                 let message = resultValue[SwiftMessage] as! String
                 
-                guard code=="0" else{
+                guard code==SwiftSuccessStatus else{
                     
                     compleFailureBusioness(Int(code)!,message)
                     return
@@ -76,7 +77,7 @@ extension NetWorkPotocol where Self:UIViewController {
                 
                 guard resultValue[SwiftBody] != nil else {
                     
-                    compleFailureBusioness(-900,SwiftBody+"为空")
+                    compleFailureBusioness(-900,SwiftBody+"为nil")
                     return
                 }
                
@@ -98,7 +99,7 @@ extension NetWorkPotocol where Self:UIViewController {
 }
 
 extension NetWorkPotocol {
-    
+   
     func requestSuccess(dataObj:Any,formable:SwiftFormable){
         
     }

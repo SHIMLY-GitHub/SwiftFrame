@@ -6,4 +6,5 @@ target 'SwiftWorkFrame' do
     pod 'Alamofire', '~> 4.4’
     pod 'ObjectMapper'
     pod 'ESPullToRefresh'
+    pod 'Kingfisher'
 end

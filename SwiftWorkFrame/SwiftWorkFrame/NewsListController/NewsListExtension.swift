@@ -12,7 +12,11 @@ extension NewListController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
+        
+        let newsModel = self.dataSource[indexPath.row]
+        
+        cell.newsModel = newsModel
         
         return cell
         
@@ -20,6 +24,6 @@ extension NewListController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return self.dataSource.count
     }
 }

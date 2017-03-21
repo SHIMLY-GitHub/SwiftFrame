@@ -7,7 +7,8 @@
 //
 
 import UIKit
-struct TestFormable:SwiftFormable {
+import Alamofire
+struct NewsListFormable:SwiftFormable {
     
     var url: String = "http://www.1001piao.com/m_i/news/getNewList"
     
@@ -25,12 +26,14 @@ class NewListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var testFormable:TestFormable = TestFormable()
+    var newsListFormabel:NewsListFormable = NewsListFormable()
+    var dataSource:[NewsListModel] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.post(formable: testFormable)
+        self.post(formable: newsListFormabel)
 
     }
 
@@ -45,11 +48,14 @@ class NewListController: UIViewController {
 }
 extension NewListController:NetWorkPotocol{
     
+   
+    
+    
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
         
-        let array =   NewsListModel().newsListArray(dataObj: dataObj)
+        self.dataSource =   NewsListModel().newsListArray(dataObj: dataObj)
         
-        
+        self.tableView.reloadData()
         
         
     }
