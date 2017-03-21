@@ -13,6 +13,8 @@
 		5407D12F1E8103F200AAF78B /* NewsListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D12E1E8103F200AAF78B /* NewsListExtension.swift */; };
 		5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1301E8106AE00AAF78B /* NewsCell.swift */; };
 		5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1361E812D1500AAF78B /* SwiftImageView.swift */; };
+		5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1381E812FAF00AAF78B /* SwiftString.swift */; };
+		5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D13A1E812FC300AAF78B /* SwiftInt.swift */; };
 		5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */; };
 		5446B1131E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446B1121E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift */; };
 		545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */; };
@@ -51,6 +53,8 @@
 		5407D12E1E8103F200AAF78B /* NewsListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListExtension.swift; sourceTree = "<group>"; };
 		5407D1301E8106AE00AAF78B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		5407D1361E812D1500AAF78B /* SwiftImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftImageView.swift; sourceTree = "<group>"; };
+		5407D1381E812FAF00AAF78B /* SwiftString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftString.swift; sourceTree = "<group>"; };
+		5407D13A1E812FC300AAF78B /* SwiftInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftInt.swift; sourceTree = "<group>"; };
 		5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFormable.swift; sourceTree = "<group>"; };
 		5446B1121E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNetWorkProtocol.swift; sourceTree = "<group>"; };
 		545ABB761E80B5C4007DD7F6 /* SwiftWorkFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWorkFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				5407D1361E812D1500AAF78B /* SwiftImageView.swift */,
+				5407D1381E812FAF00AAF78B /* SwiftString.swift */,
+				5407D13A1E812FC300AAF78B /* SwiftInt.swift */,
 			);
 			name = Extension;
 			path = SwiftWorkFrame/Extension;
@@ -392,9 +398,11 @@
 				545ABB7C1E80B5C4007DD7F6 /* ViewController.swift in Sources */,
 				5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */,
 				5407D1241E80FFC600AAF78B /* SwiftBusiness.swift in Sources */,
+				5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */,
 				5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */,
 				545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */,
 				5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */,
+				5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */,
 				545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */,
 				5407D12C1E8103C900AAF78B /* NewListController.swift in Sources */,
 				5446B1131E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift in Sources */,
