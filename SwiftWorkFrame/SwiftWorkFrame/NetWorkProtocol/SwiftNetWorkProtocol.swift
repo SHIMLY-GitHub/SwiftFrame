@@ -10,10 +10,6 @@ import Foundation
 import Alamofire
 
 protocol  NetWorkPotocol{
-    
-
-    
-    
     ///requestSuccess:请求数据成功回调
     /// - parameter dataObj : 返回数据
     /// - parameter paramenter: 请求数据的时候传入的参数 
@@ -35,7 +31,6 @@ protocol  NetWorkPotocol{
     func requestFieldSystem(error:SwiftError,formable:SwiftFormable)
 }
 
-private var requestKey: Void?
 
 extension NetWorkPotocol where Self:UIViewController{
   
@@ -61,7 +56,7 @@ extension NetWorkPotocol where Self:UIViewController{
         
     }
     
-     //@discardableResult
+    @discardableResult
     private   func alamofire(url:String,
                            params:[String:Any],
                            compleSuccess:@escaping (_ dataObj:Any)->Void,
@@ -69,7 +64,7 @@ extension NetWorkPotocol where Self:UIViewController{
                            compleFailureSystem:@escaping (_ error:Error)->Void) ->Alamofire.Request {
         
     
-  return Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
+      return Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
 
             switch response.result.isSuccess{
             case true:

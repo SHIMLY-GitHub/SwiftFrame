@@ -36,8 +36,8 @@ class  NewListController: UIViewController {
         super.viewDidLoad()
         
       self.request =  self.post(formable: newsListFormabel)
-       
-
+    
+        
     }
 
     override func didReceiveMemoryWarning() {
