@@ -62,6 +62,7 @@ class  NewListController: UIViewController {
 
 }
 
+//MARK:刷新协议
 extension NewListController:SwiftRefreshProtocol{
     
     func refreshPullDown() {
@@ -77,7 +78,7 @@ extension NewListController:SwiftRefreshProtocol{
     
   
 }
-
+//MARK:请求协议
 extension NewListController:NetWorkPotocol{
     
     
