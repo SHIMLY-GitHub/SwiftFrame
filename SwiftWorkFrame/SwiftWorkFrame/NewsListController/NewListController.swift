@@ -12,13 +12,13 @@ struct NewsListFormable:SwiftFormable {
     
     var url: String = "http://www.1001piao.com/m_i/news/getNewList"
     
-    var page:Int = 1
+    var page:Int = 0
     
     func parameter() -> [String : Any] {
         
         return ["newsType":"XMFL_RD",
-                "startRow":self.page.toString,
-                "pageSize":(self.page * 10).toString]
+                "startRow":(self.page * 10).toString,
+                "pageSize":10.toString]
     }
     
 }
@@ -65,13 +65,17 @@ class  NewListController: UIViewController {
 extension NewListController:SwiftRefreshProtocol{
     
     func refreshPullDown() {
-        
+        newsListFormabel.page = 0
         self.request =  self.swiftPost(formable: newsListFormabel)
     }
-    
-    func isPullUp() -> Bool {
-        return false
+    func refreshPullUp() {
+        newsListFormabel.page = newsListFormabel.page + 1
+        
+        
+        self.request = self.swiftPost(formable: newsListFormabel);
     }
+    
+  
 }
 
 extension NewListController:NetWorkPotocol{
@@ -79,8 +83,20 @@ extension NewListController:NetWorkPotocol{
     
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
         
-        self.dataSource =   NewsListModel().newsListArray(dataObj: dataObj)
-        self.tableView.es_stopPullToRefresh()
+        let array = NewsListModel().newsListArray(dataObj: dataObj)
+        
+        if newsListFormabel.page==0 {
+            self.dataSource =   array
+            self.tableView.es_stopPullToRefresh()
+            
+        }else{
+        
+            self.dataSource.append(contentsOf: array)
+            
+            self.tableView.es_stopLoadingMore()
+        }
+        
+        
         self.tableView.reloadData()
         
         
