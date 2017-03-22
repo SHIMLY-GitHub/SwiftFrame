@@ -35,7 +35,7 @@ protocol  NetWorkPotocol{
 extension NetWorkPotocol where Self:UIViewController{
   
     @discardableResult
-    func post(formable:SwiftFormable) -> Alamofire.Request {
+    func swiftPost(formable:SwiftFormable) -> Alamofire.Request {
         
       
        return self.alamofire(url: formable.url, params: formable.parameter(), compleSuccess: { [weak self](dataObj)  in
@@ -104,21 +104,9 @@ extension NetWorkPotocol where Self:UIViewController{
 }
 
 extension NetWorkPotocol {
-   
-  
-    
-    
-    func requestSuccess(dataObj:Any,formable:SwiftFormable){
-        
-    }
-    
-    func requestFieldBusiness(error:SwiftError,formable:SwiftFormable){
-        
-    }
-    func requestFieldSystem(error:SwiftError,formable:SwiftFormable){
-        
-    }
-    
+    func requestSuccess(dataObj:Any,formable:SwiftFormable){}
+    func requestFieldBusiness(error:SwiftError,formable:SwiftFormable){}
+    func requestFieldSystem(error:SwiftError,formable:SwiftFormable){}
     
 }
 

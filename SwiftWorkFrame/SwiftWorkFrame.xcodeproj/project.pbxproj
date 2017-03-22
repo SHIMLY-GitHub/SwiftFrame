@@ -16,6 +16,9 @@
 		5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1381E812FAF00AAF78B /* SwiftString.swift */; };
 		5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D13A1E812FC300AAF78B /* SwiftInt.swift */; };
 		543127EA1E82331D004970DA /* SwiftNetWorkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543127E91E82331D004970DA /* SwiftNetWorkProtocol.swift */; };
+		543127ED1E826D42004970DA /* SwiftRefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543127EC1E826D42004970DA /* SwiftRefreshProtocol.swift */; };
+		543127EF1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543127EE1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift */; };
+		543127F11E826F7A004970DA /* Scrollow+Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543127F01E826F7A004970DA /* Scrollow+Refresh.swift */; };
 		5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */; };
 		545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */; };
 		545ABB7C1E80B5C4007DD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */; };
@@ -56,6 +59,9 @@
 		5407D1381E812FAF00AAF78B /* SwiftString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftString.swift; sourceTree = "<group>"; };
 		5407D13A1E812FC300AAF78B /* SwiftInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftInt.swift; sourceTree = "<group>"; };
 		543127E91E82331D004970DA /* SwiftNetWorkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNetWorkProtocol.swift; sourceTree = "<group>"; };
+		543127EC1E826D42004970DA /* SwiftRefreshProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRefreshProtocol.swift; sourceTree = "<group>"; };
+		543127EE1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRefreshHeaderAnimator.swift; sourceTree = "<group>"; };
+		543127F01E826F7A004970DA /* Scrollow+Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scrollow+Refresh.swift"; sourceTree = "<group>"; };
 		5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFormable.swift; sourceTree = "<group>"; };
 		545ABB761E80B5C4007DD7F6 /* SwiftWorkFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWorkFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		5407D1291E8103C900AAF78B /* NewsListController */ = {
 			isa = PBXGroup;
 			children = (
+				543127EB1E826D0B004970DA /* Refresh */,
 				545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */,
 				5407D1331E812C4400AAF78B /* Extension */,
 				5407D12A1E8103C900AAF78B /* NewListController.swift */,
@@ -123,6 +130,17 @@
 			);
 			name = Extension;
 			path = SwiftWorkFrame/Extension;
+			sourceTree = SOURCE_ROOT;
+		};
+		543127EB1E826D0B004970DA /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				543127EC1E826D42004970DA /* SwiftRefreshProtocol.swift */,
+				543127EE1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift */,
+				543127F01E826F7A004970DA /* Scrollow+Refresh.swift */,
+			);
+			name = Refresh;
+			path = SwiftWorkFrame/Refresh;
 			sourceTree = SOURCE_ROOT;
 		};
 		545ABB6D1E80B5C3007DD7F6 = {
@@ -394,9 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543127F11E826F7A004970DA /* Scrollow+Refresh.swift in Sources */,
 				5407D12F1E8103F200AAF78B /* NewsListExtension.swift in Sources */,
 				5407D12D1E8103C900AAF78B /* NewsListModel.swift in Sources */,
 				545ABB7C1E80B5C4007DD7F6 /* ViewController.swift in Sources */,
+				543127ED1E826D42004970DA /* SwiftRefreshProtocol.swift in Sources */,
 				5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */,
 				5407D1241E80FFC600AAF78B /* SwiftBusiness.swift in Sources */,
 				5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */,
@@ -405,6 +425,7 @@
 				545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */,
 				5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */,
 				5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */,
+				543127EF1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift in Sources */,
 				545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */,
 				5407D12C1E8103C900AAF78B /* NewListController.swift in Sources */,
 			);

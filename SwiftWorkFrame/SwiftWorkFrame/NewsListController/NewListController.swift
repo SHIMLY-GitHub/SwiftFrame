@@ -34,9 +34,8 @@ class  NewListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      self.request =  self.post(formable: newsListFormabel)
-    
+       
+        self.tableView.scrollowProtocol = self;
         
     }
 
@@ -63,14 +62,25 @@ class  NewListController: UIViewController {
 
 }
 
-extension NewListController:NetWorkPotocol{
+extension NewListController:SwiftRefreshProtocol{
     
+    func refreshPullDown() {
+        
+        self.request =  self.swiftPost(formable: newsListFormabel)
+    }
+    
+    func isPullUp() -> Bool {
+        return false
+    }
+}
+
+extension NewListController:NetWorkPotocol{
     
     
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
         
         self.dataSource =   NewsListModel().newsListArray(dataObj: dataObj)
-        
+        self.tableView.es_stopPullToRefresh()
         self.tableView.reloadData()
         
         
