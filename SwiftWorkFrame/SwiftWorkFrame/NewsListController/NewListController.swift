@@ -104,13 +104,13 @@ extension NewListController:NetWorkPotocol{
     
     func requestFieldBusiness(error: SwiftError, formable: SwiftFormable) {
         
-        
+        self.tableView.stopAllRefresh()
         
     }
     
     func requestFieldSystem(error: SwiftError, formable: SwiftFormable) {
         
-         
+         self.tableView.stopAllRefresh()
     }
     
 }

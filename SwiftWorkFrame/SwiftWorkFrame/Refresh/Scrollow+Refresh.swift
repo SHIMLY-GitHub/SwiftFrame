@@ -25,13 +25,18 @@ extension UIScrollView{
             self.addScrollowAutoRefresh()
         }
     }
-
-    
+    //停止刷新所有
+    public func stopAllRefresh() -> Void {
+        self.es_stopLoadingMore()
+        self.es_stopPullToRefresh()
+    }
     private  func addScrollowAutoRefresh() -> Void {
         self.scrollowRefreshPullDown()
         self.scrollowRefreshPullUp()
         self.es_startPullToRefresh()
     }
+    
+ 
     
     //下拉刷新
     private  func scrollowRefreshPullDown() -> Void {
