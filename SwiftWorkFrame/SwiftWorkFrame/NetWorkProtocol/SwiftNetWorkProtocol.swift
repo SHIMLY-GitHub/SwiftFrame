@@ -9,13 +9,16 @@
 import Foundation
 import Alamofire
 
-protocol NetWorkPotocol {
+protocol  NetWorkPotocol{
+    
+
+    
     
     ///requestSuccess:请求数据成功回调
     /// - parameter dataObj : 返回数据
     /// - parameter paramenter: 请求数据的时候传入的参数 
     
-    func requestSuccess(dataObj:Any,formable:SwiftFormable)
+   func requestSuccess(dataObj:Any,formable:SwiftFormable)
     
     
     
@@ -32,13 +35,15 @@ protocol NetWorkPotocol {
     func requestFieldSystem(error:SwiftError,formable:SwiftFormable)
 }
 
+private var requestKey: Void?
 
-
-extension NetWorkPotocol where Self:UIViewController {
+extension NetWorkPotocol where Self:UIViewController{
   
-    func post(formable:SwiftFormable) -> Void {
+    @discardableResult
+    func post(formable:SwiftFormable) -> Alamofire.Request {
         
-        self.alamofire(url: formable.url, params: formable.parameter(), compleSuccess: { [weak self](dataObj)  in
+      
+       return self.alamofire(url: formable.url, params: formable.parameter(), compleSuccess: { [weak self](dataObj)  in
             
             self?.requestSuccess(dataObj: dataObj, formable: formable)
             
@@ -47,20 +52,24 @@ extension NetWorkPotocol where Self:UIViewController {
            self?.requestFieldBusiness(error:  SwiftError(code: code, message: message), formable: formable)
             
         }) {  [weak self]  (error)  in
+           
+           let errorCode = (error as NSError).code
+           let errorMessage = (error as NSError).description
             
-            self?.requestFieldSystem(error: SwiftError(code: 2, message: "404"), formable:formable)
+            self?.requestFieldSystem(error: SwiftError(code: errorCode, message: errorMessage), formable:formable)
         }
         
     }
     
-    private func alamofire(url:String,
+     //@discardableResult
+    private   func alamofire(url:String,
                            params:[String:Any],
                            compleSuccess:@escaping (_ dataObj:Any)->Void,
                            compleFailureBusioness:@escaping (_ code:Int,_ message:String)->Void,
-                           compleFailureSystem:@escaping (_ error:Error)->Void){
-            
-   
-     Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
+                           compleFailureSystem:@escaping (_ error:Error)->Void) ->Alamofire.Request {
+        
+    
+  return Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
 
             switch response.result.isSuccess{
             case true:
@@ -86,6 +95,7 @@ extension NetWorkPotocol where Self:UIViewController {
                 compleSuccess(dataObj as Any)
                 
             case false:
+               
                 compleFailureSystem(response.result.error!)
                 
             }
@@ -100,6 +110,9 @@ extension NetWorkPotocol where Self:UIViewController {
 
 extension NetWorkPotocol {
    
+  
+    
+    
     func requestSuccess(dataObj:Any,formable:SwiftFormable){
         
     }

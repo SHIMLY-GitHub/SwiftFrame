@@ -22,18 +22,21 @@ struct NewsListFormable:SwiftFormable {
     }
     
 }
-class NewListController: UIViewController {
+class  NewListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     var newsListFormabel:NewsListFormable = NewsListFormable()
     var dataSource:[NewsListModel] = []
     
+    var request: Alamofire.Request?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.post(formable: newsListFormabel)
+      self.request =  self.post(formable: newsListFormabel)
+       
 
     }
 
@@ -42,13 +45,26 @@ class NewListController: UIViewController {
        
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.request?.cancel()
+        
+        
+        
+    }
+    deinit {
+        
+        print("销毁");
+    }
+    
 
  
 
 }
+
 extension NewListController:NetWorkPotocol{
     
-   
     
     
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
@@ -62,10 +78,13 @@ extension NewListController:NetWorkPotocol{
     
     func requestFieldBusiness(error: SwiftError, formable: SwiftFormable) {
         
+        
+        
     }
     
     func requestFieldSystem(error: SwiftError, formable: SwiftFormable) {
         
+         
     }
     
 }

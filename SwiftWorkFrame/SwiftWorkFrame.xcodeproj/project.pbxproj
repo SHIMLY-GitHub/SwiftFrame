@@ -15,8 +15,8 @@
 		5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1361E812D1500AAF78B /* SwiftImageView.swift */; };
 		5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1381E812FAF00AAF78B /* SwiftString.swift */; };
 		5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D13A1E812FC300AAF78B /* SwiftInt.swift */; };
+		543127EA1E82331D004970DA /* SwiftNetWorkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543127E91E82331D004970DA /* SwiftNetWorkProtocol.swift */; };
 		5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */; };
-		5446B1131E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5446B1121E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift */; };
 		545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */; };
 		545ABB7C1E80B5C4007DD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */; };
 		545ABB7F1E80B5C4007DD7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545ABB7D1E80B5C4007DD7F6 /* Main.storyboard */; };
@@ -55,8 +55,8 @@
 		5407D1361E812D1500AAF78B /* SwiftImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftImageView.swift; sourceTree = "<group>"; };
 		5407D1381E812FAF00AAF78B /* SwiftString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftString.swift; sourceTree = "<group>"; };
 		5407D13A1E812FC300AAF78B /* SwiftInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftInt.swift; sourceTree = "<group>"; };
+		543127E91E82331D004970DA /* SwiftNetWorkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNetWorkProtocol.swift; sourceTree = "<group>"; };
 		5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftFormable.swift; sourceTree = "<group>"; };
-		5446B1121E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNetWorkProtocol.swift; sourceTree = "<group>"; };
 		545ABB761E80B5C4007DD7F6 /* SwiftWorkFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWorkFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 		5407D1291E8103C900AAF78B /* NewsListController */ = {
 			isa = PBXGroup;
 			children = (
+				545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */,
 				5407D1331E812C4400AAF78B /* Extension */,
 				5407D12A1E8103C900AAF78B /* NewListController.swift */,
 				5407D12B1E8103C900AAF78B /* NewsListModel.swift */,
@@ -150,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				5407D1291E8103C900AAF78B /* NewsListController */,
-				545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */,
 				545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */,
 				545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */,
 				545ABB7D1E80B5C4007DD7F6 /* Main.storyboard */,
@@ -182,12 +182,13 @@
 		545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				543127E91E82331D004970DA /* SwiftNetWorkProtocol.swift */,
 				5407D1231E80FFC600AAF78B /* SwiftBusiness.swift */,
-				5446B1121E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift */,
 				5446B1101E80DDCF000C6EBA /* SwiftFormable.swift */,
 				545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */,
 			);
-			path = NetWorkProtocol;
+			name = NetWorkProtocol;
+			path = ../NetWorkProtocol;
 			sourceTree = "<group>";
 		};
 		7AFD215FE7FF0FD438FB88B8 /* Frameworks */ = {
@@ -399,13 +400,13 @@
 				5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */,
 				5407D1241E80FFC600AAF78B /* SwiftBusiness.swift in Sources */,
 				5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */,
+				543127EA1E82331D004970DA /* SwiftNetWorkProtocol.swift in Sources */,
 				5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */,
 				545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */,
 				5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */,
 				5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */,
 				545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */,
 				5407D12C1E8103C900AAF78B /* NewListController.swift in Sources */,
-				5446B1131E80DE8D000C6EBA /* SwiftNetWorkProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

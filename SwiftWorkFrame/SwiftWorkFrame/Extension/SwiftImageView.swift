@@ -13,7 +13,7 @@ extension UIImageView {
     func setImage(url:String) -> Void {
         let url = URL(string:url)
         
-        self.kf.setImage(with: url, placeholder: UIImage(named: "morenwanpiao"), options: [.transition(ImageTransition.fade(1))], progressBlock: { (receivedSize, totalSize) in
+        self.kf.setImage(with: url, placeholder: UIImage(named: "morenwanpiao"), options: [.transition(ImageTransition.flipFromLeft(1))], progressBlock: { (receivedSize, totalSize) in
             
             
         }) { (image, error, cacheType, imageURL) in

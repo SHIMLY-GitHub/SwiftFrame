@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+
 public struct SwiftError{
     
     var code:Int!
@@ -18,6 +20,17 @@ public struct SwiftError{
         
         self.code = code;
         self.message = message;
+        switch code {
+        case -999:
+             self.message = "请求已取消"
+             break
+        case 404:
+            self.message  = "页面未找到"
+            break
+        default: break
+            
+        }
+        
     }
 
     
