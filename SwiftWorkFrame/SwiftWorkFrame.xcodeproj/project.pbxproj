@@ -28,6 +28,7 @@
 		545ABB8F1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB8E1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift */; };
 		545ABB9A1E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */; };
 		545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */; };
+		54DBD3C21E83A98D009E0D53 /* UIViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBD3C11E83A98D009E0D53 /* UIViewProtocol.swift */; };
 		54E4EB011E835CAE00C4DDA2 /* Scrollow+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */; };
 		54E4EB031E83667E00C4DDA2 /* SwiftEmptyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */; };
 		CA2C487152613D7F23C051F1 /* Pods_SwiftWorkFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E95F991B90C75E4F5AD24D /* Pods_SwiftWorkFrame.framework */; };
@@ -79,6 +80,7 @@
 		545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWorkFrameUITests.swift; sourceTree = "<group>"; };
 		545ABB9B1E80B5C4007DD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftError.swift; sourceTree = "<group>"; };
+		54DBD3C11E83A98D009E0D53 /* UIViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewProtocol.swift; sourceTree = "<group>"; };
 		54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scrollow+Empty.swift"; sourceTree = "<group>"; };
 		54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEmptyProtocol.swift; sourceTree = "<group>"; };
 		6EB1A2AAB6C2EAA1A17D9653 /* Pods-SwiftWorkFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWorkFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWorkFrame/Pods-SwiftWorkFrame.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		5407D1291E8103C900AAF78B /* NewsListController */ = {
 			isa = PBXGroup;
 			children = (
+				54DBD3C01E83A97E009E0D53 /* UIViewProtocol */,
 				543127EB1E826D0B004970DA /* Refresh */,
 				545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */,
 				5407D1331E812C4400AAF78B /* Extension */,
@@ -214,6 +217,15 @@
 			name = NetWorkProtocol;
 			path = ../NetWorkProtocol;
 			sourceTree = "<group>";
+		};
+		54DBD3C01E83A97E009E0D53 /* UIViewProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				54DBD3C11E83A98D009E0D53 /* UIViewProtocol.swift */,
+			);
+			name = UIViewProtocol;
+			path = SwiftWorkFrame/UIViewProtocol;
+			sourceTree = SOURCE_ROOT;
 		};
 		7AFD215FE7FF0FD438FB88B8 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -436,6 +448,7 @@
 				543127EF1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift in Sources */,
 				545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */,
 				5407D12C1E8103C900AAF78B /* NewListController.swift in Sources */,
+				54DBD3C21E83A98D009E0D53 /* UIViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

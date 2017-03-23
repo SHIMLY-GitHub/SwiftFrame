@@ -38,6 +38,8 @@ class  NewListController: UIViewController {
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()
+     
+        
         
     }
 

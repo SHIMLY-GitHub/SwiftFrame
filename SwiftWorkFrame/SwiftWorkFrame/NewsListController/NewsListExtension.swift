@@ -12,8 +12,7 @@ extension NewListController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsCell
-        
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath) as NewsCell
         let newsModel = self.dataSource[indexPath.row]
         
         cell.newsModel = newsModel

@@ -18,6 +18,36 @@ extension String {
     var toInt:Int?{
         return Int(self)
     }
+    //MARK: 获取字符串 长度
+    var length:Int? {
+        
+        
+        let string = self.trim
+        return string?.characters.count
+        
+    }
+    
+  
+    
+    
+    //MARK: 验证手机号
+    var isMobile:Bool? {
+        
+        guard self.length==11 else {
+            return false
+        }
+        
+        let index = self.index(self.startIndex, offsetBy: 1)
+        
+        let firseNUmber = self.trim?.substring(to: index)
+        
+        guard  firseNUmber=="1" , self.length==11 else {
+            
+            return false
+        }
+        
+        return true
+    }
     
     
     
