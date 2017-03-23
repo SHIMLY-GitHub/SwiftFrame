@@ -44,6 +44,6 @@ extension SwiftEmptyProtocol {
         return 5.0
     }
     func emptyString() -> String? {
-        return nil
+        return "暂时还没有数据哦"
     }
 }

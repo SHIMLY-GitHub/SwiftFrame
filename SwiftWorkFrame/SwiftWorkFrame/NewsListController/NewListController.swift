@@ -69,10 +69,6 @@ class  NewListController: UIViewController {
 //MARK:空白页面处理协议
 extension NewListController:SwiftEmptyProtocol{
     
- 
-    func emptyString() -> String? {
-        return "没有数据"
-    }
 }
 
 
