@@ -123,6 +123,7 @@ extension NewListController:NetWorkPotocol{
     
     func requestFieldSystem(error: SwiftError, formable: SwiftFormable) {
         
+        
          self.tableView.stopAllRefresh()
     }
     

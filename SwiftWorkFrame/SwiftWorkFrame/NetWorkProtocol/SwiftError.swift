@@ -25,8 +25,12 @@ public struct SwiftError{
              self.message = "请求已取消"
              break
         case 404:
-            self.message  = "页面未找到"
+            self.message  = "url地址错误"
             break
+        case 500:
+            self.message  = "服务器异常"
+        case -1009:
+            self.message  = "网络未连接"
         default: break
             
         }
