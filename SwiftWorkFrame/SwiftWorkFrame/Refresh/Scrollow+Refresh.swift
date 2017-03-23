@@ -30,6 +30,7 @@ extension UIScrollView{
         self.es_stopLoadingMore()
         self.es_stopPullToRefresh()
     }
+    //添加下拉、上拉
     private  func addScrollowAutoRefresh() -> Void {
         self.scrollowRefreshPullDown()
         self.scrollowRefreshPullUp()
@@ -42,7 +43,10 @@ extension UIScrollView{
     private  func scrollowRefreshPullDown() -> Void {
         
         let wpRefreshHeader = SwiftRefreshHeaderAnimator.init(frame: CGRect.zero) as ESRefreshAnimatorProtocol & ESRefreshProtocol
+        
         _ = self.es_addPullToRefresh(animator: wpRefreshHeader, handler: { [weak self] in
+            
+            
             
             self?.scrollowProtocol?.refreshPullDown()
         })

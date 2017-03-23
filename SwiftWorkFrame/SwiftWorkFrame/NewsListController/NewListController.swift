@@ -36,6 +36,8 @@ class  NewListController: UIViewController {
         super.viewDidLoad()
        
         self.tableView.scrollowProtocol = self;
+        self.tableView.emptyProtocol    = self;
+        self.tableView.tableFooterView = UIView()
         
     }
 
@@ -61,6 +63,16 @@ class  NewListController: UIViewController {
  
 
 }
+
+//MARK:空白页面处理协议
+extension NewListController:SwiftEmptyProtocol{
+    
+ 
+    func emptyString() -> String? {
+        return "没有数据"
+    }
+}
+
 
 //MARK:刷新协议
 extension NewListController:SwiftRefreshProtocol{
@@ -98,7 +110,7 @@ extension NewListController:NetWorkPotocol{
         }
         
         
-        self.tableView.reloadData()
+        self.tableView.swiftReload()
         
         
     }

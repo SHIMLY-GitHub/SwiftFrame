@@ -12,14 +12,14 @@ import ESPullToRefresh
 protocol SwiftRefreshProtocol:class {
     
     ///refreshPullDown:下拉刷新
-   
-    
     func refreshPullDown() -> Void
+    
+    
     ///refreshPullUp:上拉加载更多
-    
     func refreshPullUp() -> Void
-     ///isPullUp:是否需要上拉加载更多 默认为true
     
+    
+    ///isPullUp:是否需要上拉加载更多 默认为true
     func isPullUp() -> Bool
 
     
@@ -33,7 +33,6 @@ extension SwiftRefreshProtocol{
     func refreshPullUp(){
         
     }
-    //是否需要下拉加载更多 默认是 true
     func isPullUp() -> Bool{
         return true
     }

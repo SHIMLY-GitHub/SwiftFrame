@@ -28,6 +28,8 @@
 		545ABB8F1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB8E1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift */; };
 		545ABB9A1E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */; };
 		545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */; };
+		54E4EB011E835CAE00C4DDA2 /* Scrollow+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */; };
+		54E4EB031E83667E00C4DDA2 /* SwiftEmptyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */; };
 		CA2C487152613D7F23C051F1 /* Pods_SwiftWorkFrame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E95F991B90C75E4F5AD24D /* Pods_SwiftWorkFrame.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWorkFrameUITests.swift; sourceTree = "<group>"; };
 		545ABB9B1E80B5C4007DD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftError.swift; sourceTree = "<group>"; };
+		54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scrollow+Empty.swift"; sourceTree = "<group>"; };
+		54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEmptyProtocol.swift; sourceTree = "<group>"; };
 		6EB1A2AAB6C2EAA1A17D9653 /* Pods-SwiftWorkFrame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWorkFrame.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWorkFrame/Pods-SwiftWorkFrame.release.xcconfig"; sourceTree = "<group>"; };
 		C2E95F991B90C75E4F5AD24D /* Pods_SwiftWorkFrame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWorkFrame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -135,9 +139,11 @@
 		543127EB1E826D0B004970DA /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
-				543127EC1E826D42004970DA /* SwiftRefreshProtocol.swift */,
 				543127EE1E826D97004970DA /* SwiftRefreshHeaderAnimator.swift */,
+				543127EC1E826D42004970DA /* SwiftRefreshProtocol.swift */,
 				543127F01E826F7A004970DA /* Scrollow+Refresh.swift */,
+				54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */,
+				54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */,
 			);
 			name = Refresh;
 			path = SwiftWorkFrame/Refresh;
@@ -422,6 +428,8 @@
 				5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */,
 				543127EA1E82331D004970DA /* SwiftNetWorkProtocol.swift in Sources */,
 				5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */,
+				54E4EB011E835CAE00C4DDA2 /* Scrollow+Empty.swift in Sources */,
+				54E4EB031E83667E00C4DDA2 /* SwiftEmptyProtocol.swift in Sources */,
 				545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */,
 				5446B1111E80DDCF000C6EBA /* SwiftFormable.swift in Sources */,
 				5407D1391E812FAF00AAF78B /* SwiftString.swift in Sources */,
