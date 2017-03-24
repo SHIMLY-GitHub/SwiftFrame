@@ -21,6 +21,10 @@ protocol NavigationProtocol {
     /// 导航栏左边按钮点击事件
     func actionLeftItemAction() -> Void
     
+    func titleColor() -> UIColor?
+    
+    func titleFont() -> UIFont?
+    
 }
 extension NavigationProtocol{
     //MARK:可以根据自己需求在这几个方法里面进行默认实现
@@ -42,4 +46,12 @@ extension NavigationProtocol{
         
         
     }
+    func titleColor() -> UIColor?{
+        return UIColor.red
+    }
+    
+    func titleFont() -> UIFont?{
+        return UIFont.systemFont(ofSize: 16)
+    }
+    
 }

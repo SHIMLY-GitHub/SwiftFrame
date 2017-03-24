@@ -35,6 +35,7 @@ class  NewListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nextNavigationStyle()
+        self.title = "新闻"
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()

@@ -18,6 +18,7 @@ extension UIViewController{
         }
     }
     
+
     func nextNavigationStyle() -> Void {
         
         self.leftNavigationItem()
