@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 
+
 struct NewsListModel:Mappable {
     
     var simg:String?
@@ -44,10 +45,12 @@ struct NewsListModel:Mappable {
 
 extension NewsListModel{
     
+    
     func newsListArray(dataObj:Any) -> [NewsListModel] {
         
         return Mapper<NewsListModel>().mapArray(JSONArray: dataObj as! [[String : Any]])!
     }
+   
 }
 
 

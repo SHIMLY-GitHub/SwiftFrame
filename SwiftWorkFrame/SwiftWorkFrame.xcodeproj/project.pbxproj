@@ -28,6 +28,8 @@
 		545ABB8F1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB8E1E80B5C4007DD7F6 /* SwiftWorkFrameTests.swift */; };
 		545ABB9A1E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */; };
 		545ABBB01E80C97F007DD7F6 /* SwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */; };
+		545F66231E84F8B4009F3B33 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F66221E84F8B4009F3B33 /* NavigationProtocol.swift */; };
+		545F66251E84FA39009F3B33 /* UIViewController+NavProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F66241E84FA39009F3B33 /* UIViewController+NavProtocol.swift */; };
 		54DBD3C21E83A98D009E0D53 /* UIViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBD3C11E83A98D009E0D53 /* UIViewProtocol.swift */; };
 		54E4EB011E835CAE00C4DDA2 /* Scrollow+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */; };
 		54E4EB031E83667E00C4DDA2 /* SwiftEmptyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */; };
@@ -80,6 +82,8 @@
 		545ABB991E80B5C4007DD7F6 /* SwiftWorkFrameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWorkFrameUITests.swift; sourceTree = "<group>"; };
 		545ABB9B1E80B5C4007DD7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		545ABBAF1E80C97F007DD7F6 /* SwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftError.swift; sourceTree = "<group>"; };
+		545F66221E84F8B4009F3B33 /* NavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		545F66241E84FA39009F3B33 /* UIViewController+NavProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavProtocol.swift"; sourceTree = "<group>"; };
 		54DBD3C11E83A98D009E0D53 /* UIViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewProtocol.swift; sourceTree = "<group>"; };
 		54E4EB001E835CAE00C4DDA2 /* Scrollow+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Scrollow+Empty.swift"; sourceTree = "<group>"; };
 		54E4EB021E83667E00C4DDA2 /* SwiftEmptyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftEmptyProtocol.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		5407D1291E8103C900AAF78B /* NewsListController */ = {
 			isa = PBXGroup;
 			children = (
+				545F66211E84F814009F3B33 /* NavigationProtocol */,
 				54DBD3C01E83A97E009E0D53 /* UIViewProtocol */,
 				543127EB1E826D0B004970DA /* Refresh */,
 				545ABBA81E80BF2B007DD7F6 /* NetWorkProtocol */,
@@ -216,6 +221,15 @@
 			);
 			name = NetWorkProtocol;
 			path = ../NetWorkProtocol;
+			sourceTree = "<group>";
+		};
+		545F66211E84F814009F3B33 /* NavigationProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				545F66221E84F8B4009F3B33 /* NavigationProtocol.swift */,
+				545F66241E84FA39009F3B33 /* UIViewController+NavProtocol.swift */,
+			);
+			path = NavigationProtocol;
 			sourceTree = "<group>";
 		};
 		54DBD3C01E83A97E009E0D53 /* UIViewProtocol */ = {
@@ -438,7 +452,9 @@
 				5407D1371E812D1500AAF78B /* SwiftImageView.swift in Sources */,
 				5407D1241E80FFC600AAF78B /* SwiftBusiness.swift in Sources */,
 				5407D13B1E812FC300AAF78B /* SwiftInt.swift in Sources */,
+				545F66251E84FA39009F3B33 /* UIViewController+NavProtocol.swift in Sources */,
 				543127EA1E82331D004970DA /* SwiftNetWorkProtocol.swift in Sources */,
+				545F66231E84F8B4009F3B33 /* NavigationProtocol.swift in Sources */,
 				5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */,
 				54E4EB011E835CAE00C4DDA2 /* Scrollow+Empty.swift in Sources */,
 				54E4EB031E83667E00C4DDA2 /* SwiftEmptyProtocol.swift in Sources */,

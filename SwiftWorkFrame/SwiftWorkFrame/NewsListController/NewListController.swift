@@ -34,13 +34,10 @@ class  NewListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        self.nextNavigationStyle()
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()
-     
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,9 +64,7 @@ class  NewListController: UIViewController {
 }
 
 //MARK:空白页面处理协议
-extension NewListController:SwiftEmptyProtocol{
-    
-}
+extension NewListController:SwiftEmptyProtocol{}
 
 
 //MARK:刷新协议
@@ -95,7 +90,7 @@ extension NewListController:NetWorkPotocol{
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
         
         let array = NewsListModel().newsListArray(dataObj: dataObj)
-        
+      
         if newsListFormabel.page==0 {
             self.dataSource =   array
             self.tableView.es_stopPullToRefresh()
