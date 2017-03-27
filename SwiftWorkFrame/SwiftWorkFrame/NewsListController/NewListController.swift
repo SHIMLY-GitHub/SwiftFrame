@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 struct NewsListFormable:SwiftFormable {
     
-    var url: String = "http://www.1001piao.com/m_i/news/getNewList"
+    var url: String = "https://www.1001piao.com:8443/m_i/news/getNewList"
     
     var page:Int = 0
     

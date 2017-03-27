@@ -29,8 +29,14 @@ public struct SwiftError{
             break
         case 500:
             self.message  = "服务器异常"
+            break
         case -1009:
             self.message  = "网络未连接"
+            break
+            
+        case -1202:
+            self.message = "The certificate for this server is invalid"
+            break
         default: break
             
         }

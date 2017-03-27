@@ -55,13 +55,15 @@ extension NetWorkPotocol where Self:UIViewController{
         
     }
     
+
+    
     @discardableResult
     private   func alamofire(url:String,
                            params:[String:Any],
                            compleSuccess:@escaping (_ dataObj:Any)->Void,
                            compleFailureBusioness:@escaping (_ code:Int,_ message:String)->Void,
                            compleFailureSystem:@escaping (_ error:Error)->Void) ->Alamofire.Request {
-        
+      self.authService()
     
       return Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
 
@@ -95,8 +97,46 @@ extension NetWorkPotocol where Self:UIViewController{
             }
             
         }
+        
+        
             
    
+        
+    }
+    
+    //MARK:适配https 认证服务端证书
+    ///copy http://www.hangge.com/blog/cache/detail_1052.html
+    
+    func authService() -> Void {
+        
+        let manager = SessionManager.default
+        manager.delegate.sessionDidReceiveChallenge = { session, challenge in
+            if challenge.protectionSpace.authenticationMethod
+                == NSURLAuthenticationMethodServerTrust {
+                let serverTrust:SecTrust = challenge.protectionSpace.serverTrust!
+                let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0)!
+                let remoteCertificateData
+                    = CFBridgingRetain(SecCertificateCopyData(certificate))!
+                let cerPath = Bundle.main.path(forResource: "wanpiao", ofType: "cer")!
+                let cerUrl = URL(fileURLWithPath:cerPath)
+                let localCertificateData = try! Data(contentsOf: cerUrl)
+                
+                if (remoteCertificateData.isEqual(localCertificateData) == true) {
+                    
+                    let credential = URLCredential(trust: serverTrust)
+                    challenge.sender?.use(credential, for: challenge)
+                    return (URLSession.AuthChallengeDisposition.useCredential,
+                            URLCredential(trust: challenge.protectionSpace.serverTrust!))
+                    
+                } else {
+                    return (.cancelAuthenticationChallenge, nil)
+                }
+            }
+            
+            return (.cancelAuthenticationChallenge, nil)
+        }
+        
+        
         
     }
     

@@ -8,18 +8,26 @@
 
 import UIKit
 
-
+enum MyError:Error {
+    case sampleError
+}
 
 
 
 class ViewController: UIViewController {
 
-   
+
+ 
+    
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
+     
+        
     }
 
     
