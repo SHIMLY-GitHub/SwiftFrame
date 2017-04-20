@@ -27,6 +27,9 @@ class  NewListController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var newsListFormabel:NewsListFormable = NewsListFormable()
+    var newsListModel:NewsListModel = NewsListModel()
+    
+    
     var dataSource:[NewsListModel] = []
     
     var request: Alamofire.Request?
@@ -35,16 +38,19 @@ class  NewListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          self.title = "新闻"
-       
-       
-        
-        
-        
         self.nextNavigationStyle()
        
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()
+        
+        let object =  SwiftCache.globalCache.objectValue(key: "newsList")
+
+        if object != nil {
+            let array =  newsListModel.newsListArray(dataObj: object as Any)
+            self.dataSource = array;
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,7 +103,7 @@ extension NewListController:NetWorkPotocol{
         
      
         
-        let array = NewsListModel().newsListArray(dataObj: dataObj)
+        let array = newsListModel.newsListArray(dataObj: dataObj)
       
         if newsListFormabel.page==0 {
             self.dataSource =   array
@@ -112,7 +118,7 @@ extension NewListController:NetWorkPotocol{
             self.tableView.es_stopLoadingMore()
         }
 
-        
+        SwiftCache.globalCache.setObject(anyObject: self.dataSource.toJSON(), key: "newsList")
         self.tableView.swiftReload()
     
         

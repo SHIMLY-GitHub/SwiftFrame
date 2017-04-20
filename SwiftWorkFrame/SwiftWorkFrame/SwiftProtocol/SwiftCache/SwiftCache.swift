@@ -66,7 +66,7 @@ import ObjectMapper
         
     }
     
-   public func objectValue(key:String) -> Any {
+   public func objectValue(key:String) -> Any? {
         
         let url = URL(fileURLWithPath: self.diskCachePath(key: key))
         
@@ -81,14 +81,14 @@ import ObjectMapper
                 
             } catch  {
                 
-                return ""
+                return nil
                 
             }
             
             
         } catch  {
             
-            return ""
+            return nil
         }
 
         
