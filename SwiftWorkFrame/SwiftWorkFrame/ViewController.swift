@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum MyError:Error {
-    case sampleError
-}
-
-
 
 class ViewController: UIViewController {
 

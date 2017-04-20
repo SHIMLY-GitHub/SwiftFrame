@@ -11,6 +11,7 @@ import UIKit
 
 protocol ResuableView:class {}
 
+
 extension ResuableView where Self:UIView{
     
     
@@ -86,7 +87,7 @@ extension UICollectionView {
         register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: T.resuseIdentifier)
     }
     
-    /* 
+    /*  瀑布流布局用到的 CHT layout
     func registerCHTHeaderArr<T:UICollectionReusableView>(classNames:[(_:T.Type)]) where T:ResuableView,T:NibLoadableView  {
         
         for className in classNames {

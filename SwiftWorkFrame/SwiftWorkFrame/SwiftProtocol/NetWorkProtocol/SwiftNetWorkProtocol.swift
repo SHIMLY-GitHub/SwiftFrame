@@ -25,7 +25,7 @@ protocol  NetWorkPotocol{
     
     
     ///requestFieldSystem:用于系统返回的错误 例如 404 405
-    /// - parameter error : 返回的错误信息
+    /// - parameter error : 返回错误信息
     /// - parameter parameter: 请求数据的时候传入的参数
     func requestFieldSystem(error:SwiftError,formable:SwiftFormable)
 }
@@ -63,6 +63,7 @@ extension NetWorkPotocol where Self:UIViewController{
                            compleSuccess:@escaping (_ dataObj:Any)->Void,
                            compleFailureBusioness:@escaping (_ code:Int,_ message:String)->Void,
                            compleFailureSystem:@escaping (_ error:Error)->Void) ->Alamofire.Request {
+    //认证服务端
       self.authService()
     
       return Alamofire.request(url, method: .post, parameters:params, encoding: URLEncoding.default, headers: nil).responseJSON { (response:DataResponse) in

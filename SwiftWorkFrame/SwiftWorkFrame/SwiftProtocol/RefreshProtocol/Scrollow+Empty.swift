@@ -41,6 +41,7 @@ extension UIScrollView{
       
         if self is UITableView {
             let tableView = self as! UITableView
+            
             tableView.reloadData()
             
             let isEmpty = self.isEmptyTableView()

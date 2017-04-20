@@ -34,8 +34,14 @@ class  NewListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.title = "新闻"
+       
+       
+        
+        
+        
         self.nextNavigationStyle()
-        self.title = "新闻"
+       
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()
@@ -50,8 +56,6 @@ class  NewListController: UIViewController {
         super.viewDidDisappear(animated)
         
         self.request?.cancel()
-        
-        
         
     }
     deinit {
@@ -72,12 +76,13 @@ extension NewListController:SwiftEmptyProtocol{}
 extension NewListController:SwiftRefreshProtocol{
     
     func refreshPullDown() {
+        
         newsListFormabel.page = 0
         self.request =  self.swiftPost(formable: newsListFormabel)
     }
     func refreshPullUp() {
         newsListFormabel.page = newsListFormabel.page + 1
-        
+      
         
         self.request = self.swiftPost(formable: newsListFormabel);
     }
@@ -90,10 +95,14 @@ extension NewListController:NetWorkPotocol{
     
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
         
+     
+        
         let array = NewsListModel().newsListArray(dataObj: dataObj)
       
         if newsListFormabel.page==0 {
             self.dataSource =   array
+            
+             
             self.tableView.es_stopPullToRefresh()
             
         }else{
@@ -102,10 +111,10 @@ extension NewListController:NetWorkPotocol{
             
             self.tableView.es_stopLoadingMore()
         }
-        
+
         
         self.tableView.swiftReload()
-        
+    
         
     }
     

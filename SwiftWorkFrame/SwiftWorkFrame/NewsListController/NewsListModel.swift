@@ -48,7 +48,10 @@ extension NewsListModel{
     
     func newsListArray(dataObj:Any) -> [NewsListModel] {
         
-        return Mapper<NewsListModel>().mapArray(JSONArray: dataObj as! [[String : Any]])!
+        let array = Mapper<NewsListModel>().mapArray(JSONArray: dataObj as! [[String : Any]])!
+        SwiftCache.globalCache.setObject(anyObject: array.toJSON(), key: "cecece")
+    
+        return array
     }
    
 }
