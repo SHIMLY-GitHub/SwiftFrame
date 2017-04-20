@@ -43,14 +43,12 @@ class  NewListController: UIViewController {
         self.tableView.scrollowProtocol = self;
         self.tableView.emptyProtocol    = self;
         self.tableView.tableFooterView = UIView()
+        let array:[NewsListModel] =   newsListModel.cacheObject(key: "newsList")
         
-        let object =  SwiftCache.globalCache.objectValue(key: "newsList")
-
-        if object != nil {
-            let array =  newsListModel.newsListArray(dataObj: object as Any)
-            self.dataSource = array;
-            
-        }
+        self.dataSource = array
+      
+        
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,30 +95,22 @@ extension NewListController:SwiftRefreshProtocol{
 }
 //MARK:请求协议
 extension NewListController:NetWorkPotocol{
-    
-    
     func requestSuccess(dataObj: Any, formable: SwiftFormable) {
-        
-     
         
         let array = newsListModel.newsListArray(dataObj: dataObj)
       
         if newsListFormabel.page==0 {
             self.dataSource =   array
-            
-             
             self.tableView.es_stopPullToRefresh()
             
         }else{
-        
             self.dataSource.append(contentsOf: array)
-            
             self.tableView.es_stopLoadingMore()
         }
 
-        SwiftCache.globalCache.setObject(anyObject: self.dataSource.toJSON(), key: "newsList")
+        self.dataSource.toJSON().cache(key: "newsList")
+        
         self.tableView.swiftReload()
-    
         
     }
     

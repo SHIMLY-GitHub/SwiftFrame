@@ -22,3 +22,12 @@ extension UIImageView {
         }
     }
 }
+extension Array{
+    
+    func cache(key:String) -> Void {
+        
+         SwiftCache.globalCache.setObject(anyObject: self, key: key)
+    }
+    
+  
+}

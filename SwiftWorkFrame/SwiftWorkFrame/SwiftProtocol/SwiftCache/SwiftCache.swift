@@ -39,6 +39,7 @@ import ObjectMapper
  
         
     }
+ 
   private  func setData(data:Data,key:String) -> Void {
         
         

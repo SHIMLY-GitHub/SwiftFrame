@@ -11,6 +11,7 @@ import ObjectMapper
 
 
 
+
 struct NewsListModel:Mappable {
     
     var simg:String?
@@ -49,8 +50,6 @@ extension NewsListModel{
     func newsListArray(dataObj:Any) -> [NewsListModel] {
         
         let array = Mapper<NewsListModel>().mapArray(JSONArray: dataObj as! [[String : Any]])!
-        SwiftCache.globalCache.setObject(anyObject: array.toJSON(), key: "cecece")
-    
         return array
     }
    
