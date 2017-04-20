@@ -50,6 +50,7 @@ extension NewsListModel{
     func newsListArray(dataObj:Any) -> [NewsListModel] {
         
         let array = Mapper<NewsListModel>().mapArray(JSONArray: dataObj as! [[String : Any]])!
+       
         return array
     }
    
