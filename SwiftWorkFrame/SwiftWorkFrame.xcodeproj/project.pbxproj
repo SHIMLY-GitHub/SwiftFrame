@@ -12,6 +12,9 @@
 		5407D12F1E8103F200AAF78B /* NewsListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D12E1E8103F200AAF78B /* NewsListExtension.swift */; };
 		5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407D1301E8106AE00AAF78B /* NewsCell.swift */; };
 		54415A731E88E06200927D08 /* wanpiao.cer in Resources */ = {isa = PBXBuildFile; fileRef = 54415A721E88E06200927D08 /* wanpiao.cer */; };
+		544294571EAEDE590060A2DA /* AnimationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544294561EAEDE590060A2DA /* AnimationListController.swift */; };
+		5442945A1EAEE0910060A2DA /* AnimationButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544294591EAEE0910060A2DA /* AnimationButtonCell.swift */; };
+		5442945D1EAEE7440060A2DA /* AnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442945C1EAEE7440060A2DA /* AnimationProtocol.swift */; };
 		545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */; };
 		545ABB7C1E80B5C4007DD7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */; };
 		545ABB7F1E80B5C4007DD7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545ABB7D1E80B5C4007DD7F6 /* Main.storyboard */; };
@@ -63,6 +66,9 @@
 		5407D12E1E8103F200AAF78B /* NewsListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsListExtension.swift; sourceTree = "<group>"; };
 		5407D1301E8106AE00AAF78B /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		54415A721E88E06200927D08 /* wanpiao.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = wanpiao.cer; sourceTree = "<group>"; };
+		544294561EAEDE590060A2DA /* AnimationListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationListController.swift; sourceTree = "<group>"; };
+		544294591EAEE0910060A2DA /* AnimationButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationButtonCell.swift; sourceTree = "<group>"; };
+		5442945C1EAEE7440060A2DA /* AnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationProtocol.swift; sourceTree = "<group>"; };
 		545ABB761E80B5C4007DD7F6 /* SwiftWorkFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWorkFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,31 @@
 			path = NewsListController;
 			sourceTree = "<group>";
 		};
+		544294551EAEDE2A0060A2DA /* ListController */ = {
+			isa = PBXGroup;
+			children = (
+				544294581EAEE0810060A2DA /* Cell */,
+				544294561EAEDE590060A2DA /* AnimationListController.swift */,
+			);
+			path = ListController;
+			sourceTree = "<group>";
+		};
+		544294581EAEE0810060A2DA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				544294591EAEE0910060A2DA /* AnimationButtonCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5442945B1EAEE7090060A2DA /* AnimationProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				5442945C1EAEE7440060A2DA /* AnimationProtocol.swift */,
+			);
+			path = AnimationProtocol;
+			sourceTree = "<group>";
+		};
 		545ABB6D1E80B5C3007DD7F6 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +192,7 @@
 			children = (
 				54415A721E88E06200927D08 /* wanpiao.cer */,
 				545F66361E84FE0B009F3B33 /* SwiftProtocol */,
+				544294551EAEDE2A0060A2DA /* ListController */,
 				5407D1291E8103C900AAF78B /* NewsListController */,
 				545ABB791E80B5C4007DD7F6 /* AppDelegate.swift */,
 				545ABB7B1E80B5C4007DD7F6 /* ViewController.swift */,
@@ -201,6 +233,7 @@
 		545F66361E84FE0B009F3B33 /* SwiftProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				5442945B1EAEE7090060A2DA /* AnimationProtocol */,
 				545B9AA81EA84BB300B766BE /* SwiftCache */,
 				545F66371E84FE0B009F3B33 /* Extension */,
 				545F663B1E84FE0B009F3B33 /* NavigationProtocol */,
@@ -466,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544294571EAEDE590060A2DA /* AnimationListController.swift in Sources */,
 				5407D12F1E8103F200AAF78B /* NewsListExtension.swift in Sources */,
 				545F66591E84FE0B009F3B33 /* UIViewProtocol.swift in Sources */,
 				545F664C1E84FE0B009F3B33 /* SwiftInt.swift in Sources */,
@@ -476,6 +510,7 @@
 				5407D1311E8106AE00AAF78B /* NewsCell.swift in Sources */,
 				545B9AAA1EA84C3900B766BE /* SwiftCache.swift in Sources */,
 				545B9AAC1EA8B19700B766BE /* SwiftMappable.swift in Sources */,
+				5442945A1EAEE0910060A2DA /* AnimationButtonCell.swift in Sources */,
 				545ABB7A1E80B5C4007DD7F6 /* AppDelegate.swift in Sources */,
 				545F66571E84FE0B009F3B33 /* SwiftRefreshHeaderAnimator.swift in Sources */,
 				545F66521E84FE0B009F3B33 /* SwiftFormable.swift in Sources */,
@@ -488,6 +523,7 @@
 				545F664F1E84FE0B009F3B33 /* UIViewController+NavProtocol.swift in Sources */,
 				545F664D1E84FE0B009F3B33 /* SwiftString.swift in Sources */,
 				545F66541E84FE0B009F3B33 /* Scrollow+Empty.swift in Sources */,
+				5442945D1EAEE7440060A2DA /* AnimationProtocol.swift in Sources */,
 				545F664E1E84FE0B009F3B33 /* NavigationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
